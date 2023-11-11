@@ -95,7 +95,7 @@ body.dark-mode .center-text {
 
 @media (max-width: 850px) {
     .center-text {
-        font-size: 12px;
+        font-size: 18px;
     }
     .bottom-links {
         font-size: 14px;
