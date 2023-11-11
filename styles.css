@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'BLGlobule';
+    src: url('fonts/Globule HD.woff2') format('woff2'),
+         url('fonts/Globule HD.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    background-color: transparent;
+}
+
+body, .center-text {
+    font-family: 'BLGlobule', sans-serif;
+}
+
+.center-text {
+    text-align: center;
+    color: #08080B;
+    font-size: 1.75vw;
+    letter-spacing: -0.35px;
+    opacity: 0;
+    padding: 120px;
+    word-wrap: break-word;
+    transition: opacity 0.3s;
+    margin-top: -20px;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.bottom-links {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    opacity: 0;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out 2s forwards;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.bottom-links a {
+    color: #D9D9DA;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.bottom-links a:hover {
+    color: #08080B;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #08080B;
+}
+
+body.dark-mode .center-text {
+    color: #E6E6E7;
+}
+
+.center-text.dark-mode {
+    color: #ffffff;
+}
+
+.bottom-links a.dark-mode {
+    color: #2D2D30;
+}
+
+.bottom-links a:hover.dark-mode {
+    color: #E6E6E7;
+}
+
+@media (min-width: 1440px) {
+    .center-text {
+        font-size: 24px;
+    }
+    .bottom-links {
+        font-size: 18px;
+        margin: 0 20px;
+    }  
+}
+
+@media (max-width: 850px) {
+    .center-text {
+        font-size: 22px;
+    }
+    .bottom-links {
+        font-size: 14px;
+    }  
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.content {
+    text-align: center;
+}
+
+#text {
+    font-size: 24px;
+    font-family: "Your Custom Font", sans-serif;
+    color: rgb(0, 0, 0);
+}
