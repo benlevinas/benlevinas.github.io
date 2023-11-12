@@ -1,7 +1,9 @@
 const textContainer = document.getElementById("textContainer");
 const bottomLinks = document.getElementById("bottomLinks");
-const texts = ['The website of Ben Levinas is \ncurrently in development.', '"We become what we behold. We shape our tools and then our tools shape us." \n- Father John Culkin'];
+const texts = ['The website of Ben Levinas is <br>currently in development.', '"We become what we behold. We shape our tools and then our tools shape us." <br>- Father John Culkin'];
 let currentIndex = 0;
+
+document.getElementById('textcontainer').innerHTML = texts;
 
 function fadeInElements() {
     textContainer.style.opacity = 1;
