@@ -27,10 +27,11 @@ body, .center-text {
     font-size: 1.75vw;
     letter-spacing: -0.35px;
     opacity: 0;
-    padding: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
     word-wrap: break-word;
     transition: opacity 0.3s;
-    margin-top: -40px;
+    margin-top: -60px;
     -webkit-font-smoothing: antialiased;
     user-select: none;
     -webkit-user-select: none;
