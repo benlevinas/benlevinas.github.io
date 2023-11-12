@@ -16,7 +16,6 @@ body {
     position: relative;
     overflow: hidden;
     background-color: transparent;
-    box-sizing: border-box;
 }
 
 body, .center-text {
@@ -32,7 +31,7 @@ body, .center-text {
     padding: 70px;
     word-wrap: break-word;
     transition: opacity 0.3s;
-    /*margin-top: -40px;*/
+    margin-top: -40px;
     -webkit-font-smoothing: antialiased;
     user-select: none;
     -webkit-user-select: none;
