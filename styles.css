@@ -97,7 +97,6 @@ body.dark-mode .center-text {
     .center-text {
         font-size: 18px;
         margin-top: -25px;
-        white-space: pre-line; /* Add this property for line break */
         box-sizing: border-box;
         -webkit-box-sizing:border-box;
     }
