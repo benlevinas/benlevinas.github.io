@@ -103,16 +103,7 @@ body.dark-mode .center-text {
     }
 }
 
-/* Media query for screens between 601px and 1024px */
-@media (min-width: 852px) and (max-width: 1024px) {
-    .center-text {
-        font-size: 22px;
-        padding: 90px;
-        margin-top: -30px;
-        box-sizing: border-box;
-        -webkit-box-sizing:border-box;
-    }
-}
+
 
 /* Media query for screens with a width above 1024px */
 @media (min-width: 1025px) {
