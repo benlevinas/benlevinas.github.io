@@ -103,7 +103,7 @@ body.dark-mode .center-text {
     .center-text {
         font-size: 20px;
         padding: 120px;
-        margin-top: -20px;
+        margin-top: -10px;
         white-space: nowrap;
     }
     .bottom-links {
