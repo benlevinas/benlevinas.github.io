@@ -27,7 +27,7 @@ body, .center-text {
     font-size: 1.75vw;
     letter-spacing: -0.35px;
     opacity: 0;
-    padding: 90px;
+    padding: 70px;
     word-wrap: break-word;
     transition: opacity 0.3s;
     margin-top: -40px;
@@ -95,7 +95,7 @@ body.dark-mode .center-text {
 
 @media (max-width: 850px) {
     .center-text {
-        font-size: 22px;
+        font-size: 18px;
     }
     .bottom-links {
         font-size: 14px;
