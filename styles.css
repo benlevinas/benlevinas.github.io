@@ -15,8 +15,6 @@ body {
     margin: 0;
     position: relative;
     background-color: transparent;
-    box-sizing: border-box;
-    -webkit-box-sizing:border-box;
 }
 
 body, .center-text {
@@ -26,19 +24,15 @@ body, .center-text {
 .center-text {
     text-align: center;
     color: #08080B;
-    font-size: 1.75vw;
-    letter-spacing: -0.35px;
+    font-size: 20px;
+    letter-spacing: -0.2px;
     opacity: 0;
-    padding-left: 70px;
-    padding-right: 70px;
-    word-wrap: break-word;
     transition: opacity 0.3s;
-    margin-top: -60px;
-    -webkit-font-smoothing: antialiased;
     user-select: none;
+    -webkit-font-smoothing: antialiased;
     -webkit-user-select: none;
-    box-sizing: border-box;
-    -webkit-box-sizing:border-box;
+    white-space: pre;
+
 }
 
 .bottom-links {
@@ -46,16 +40,15 @@ body, .center-text {
     bottom: 10px;
     left: 0;
     width: 100%;
+    font-size: 14px;
     background-color: transparent;
     padding: 10px;
     opacity: 0;
     text-align: center;
     animation: fadeIn 1s ease-in-out 2s forwards;
-    -webkit-font-smoothing: antialiased;
     user-select: none;
+    -webkit-font-smoothing: antialiased;
     -webkit-user-select: none;
-    box-sizing: border-box;
-    -webkit-box-sizing:border-box;
 }
 
 .bottom-links a {
@@ -63,8 +56,6 @@ body, .center-text {
     text-decoration: none;
     margin: 0 10px;
     transition: color 0.3s;
-    box-sizing: border-box;
-    -webkit-box-sizing:border-box;
 }
 
 .bottom-links a:hover {
@@ -92,29 +83,34 @@ body.dark-mode .center-text {
     color: #E6E6E7;
 }
 
-/* Media query for screens with a width up to 852px (iPhone breakpoint) */
-@media (max-width: 852px) {
+
+/* Media query for screens with a width up to 600px */
+@media (max-width: 600px) {
     .center-text {
-        font-size: 18px;
-        padding-left: 25px;
-        padding-right: 25px;
-        margin-top: -25px;
-        box-sizing: border-box;
-        -webkit-box-sizing:border-box;
+        font-size: 17px;
+        margin-top: -20px;
+        white-space: pre;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .bottom-links {
+        font-size: 12px;
     }
 }
-
-
 
 /* Media query for screens with a width above 1024px */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .center-text {
-        font-size: 24px;
+        font-size: 20px;
         padding: 120px;
-        margin-top: -40px;
-        box-sizing: border-box;
+        margin-top: -20px;
+        white-space: nowrap;
+    }
+    .bottom-links {
+        font-size: 14px;
     }
 }
+
 
 @keyframes fadeIn {
     from {
@@ -132,25 +128,4 @@ body.dark-mode .center-text {
     to {
         opacity: 0;
     }
-}
-
-
-body {
-    background-color: rgb(255, 255, 255);
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    box-sizing: border-box;
-}
-
-.content {
-    text-align: center;
-}
-
-#text {
-    font-size: 24px;
-    font-family: "Your Custom Font", sans-serif;
-    color: rgb(0, 0, 0);
 }
