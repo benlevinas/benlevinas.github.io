@@ -1,27 +1,28 @@
 const textContainer = document.getElementById("textContainer");
 const bottomLinks = document.getElementById("bottomLinks");
-const texts = ['The website of Ben Levinas is <br>currently in development.', '"We become what we behold. We shape our tools and then our tools shape us." <br>- Father John Culkin'];
+const texts = [
+  'The website of Ben Levinas is \ncurrently in development.',
+  '"We become what we behold. We shape \nour tools and then our tools shape us."\n- Father John Culkin'
+];
 let currentIndex = 0;
 
-document.getElementById('textContainer').innerHTML = texts;
-
 function fadeInElements() {
-    textContainer.style.opacity = 1;
-    bottomLinks.style.opacity = 1;
+  textContainer.style.opacity = 1;
+  bottomLinks.style.opacity = 1;
 }
 
 function updateText() {
-    textContainer.textContent = texts[currentIndex];
-    textContainer.style.animation = "fadeIn 2s ease-in-out forwards";
-    bottomLinks.style.animation = "fadeIn 2s ease-in-out 2s forwards";
-    setTimeout(function () {
-        textContainer.style.animation = "fadeOut 2s ease-in-out forwards";
-        currentIndex = (currentIndex + 1) % texts.length;
-        setTimeout(() => {
-            updateText();
-            fadeInElements();
-        }, 2000);
-    }, 8000);
+  textContainer.innerHTML = texts[currentIndex]; // Use innerHTML to interpret HTML tags
+  textContainer.style.animation = "fadeIn 2s ease-in-out forwards";
+  bottomLinks.style.animation = "fadeIn 2s ease-in-out 2s forwards";
+  setTimeout(function () {
+    textContainer.style.animation = "fadeOut 2s ease-in-out forwards";
+    currentIndex = (currentIndex + 1) % texts.length;
+    setTimeout(() => {
+      updateText();
+      fadeInElements();
+    }, 2000);
+  }, 8000);
 }
 
 setTimeout(updateText, 1000);
