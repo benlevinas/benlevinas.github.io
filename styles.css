@@ -96,6 +96,8 @@ body.dark-mode .center-text {
 @media (max-width: 852px) {
     .center-text {
         font-size: 18px;
+        padding-left: 25px;
+        padding-right: 25px;
         margin-top: -25px;
         box-sizing: border-box;
         -webkit-box-sizing:border-box;
