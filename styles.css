@@ -83,23 +83,32 @@ body.dark-mode .center-text {
     color: #E6E6E7;
 }
 
-@media (min-width: 1440px) {
+/* Media query for screens with a width up to 600px (iPhone breakpoint) */
+@media (max-width: 600px) {
     .center-text {
-        font-size: 24px;
-    }
-    .bottom-links {
         font-size: 18px;
-        margin: 0 20px;
-    }  
+        padding: 50px;
+        margin-top: -15px;
+        white-space: pre-line; /* Add this property for line break */
+    }
 }
 
-@media (max-width: 850px) {
+/* Media query for screens between 601px and 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
     .center-text {
-        font-size: 18px;
+        font-size: 22px;
+        padding: 80px;
+        margin-top: -20px;
     }
-    .bottom-links {
-        font-size: 14px;
-    }  
+}
+
+/* Media query for screens with a width above 1024px */
+@media (min-width: 1025px) {
+    .center-text {
+        font-size: 24px;
+        padding: 120px;
+        margin-top: -30px;
+    }
 }
 
 @keyframes fadeIn {
