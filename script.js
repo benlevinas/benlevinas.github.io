@@ -1,6 +1,6 @@
 const textContainer = document.getElementById("textContainer");
 const bottomLinks = document.getElementById("bottomLinks");
-const texts = ['The website of Ben Levinas is <b>currently in development.', '"We become what we behold. We shape our tools and then <b>our tools shape us."<b> - Father John Culkin'];
+const texts = ['The website of Ben Levinas is <br>currently in development.', '"We become what we behold. We shape our tools and then <br>our tools shape us."<br> - Father John Culkin'];
 let currentIndex = 0;
 
 function fadeInElements() {
