@@ -92,10 +92,10 @@ body.dark-mode .center-text {
     color: #E6E6E7;
 }
 
-/* Media query for screens with a width up to 600px (iPhone breakpoint) */
+/* Media query for screens with a width up to 852px (iPhone breakpoint) */
 @media (max-width: 852px) {
     .center-text {
-        font-size: 16px;
+        font-size: 18px;
         margin-top: -25px;
         white-space: pre-line; /* Add this property for line break */
         box-sizing: border-box;
