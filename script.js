@@ -3,7 +3,7 @@ const bottomLinks = document.getElementById("bottomLinks");
 const texts = ['The website of Ben Levinas is <br>currently in development.', '"We become what we behold. We shape our tools and then our tools shape us." <br>- Father John Culkin'];
 let currentIndex = 0;
 
-document.getElementById('textcontainer').innerHTML = texts;
+document.getElementById('textContainer').innerHTML = texts;
 
 function fadeInElements() {
     textContainer.style.opacity = 1;
