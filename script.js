@@ -1,7 +1,7 @@
 const textContainer = document.getElementById("textContainer");
 const bottomLinks = document.getElementById("bottomLinks");
 const texts = [
-  'Ben Levinas is an industrial designer \nbuilding narratives, sensibilities, and typologies \nfor a new future.',
+  'Ben Levinas is an industrial designer \nbuilding narratives, sensibilities, \nand typologies for a new future.',
   '"We become what we behold. We shape \nour tools and then our tools shape us."\n- Father John Culkin'
 ];
 let currentIndex = 0;
@@ -43,7 +43,7 @@ function updateTheme() {
     }
 }
 
-function updateDarkModeLinks(isDarkMode) {
+///function updateDarkModeLinks(isDarkMode) {
     const links = document.querySelectorAll('.bottom-links a');
 
     links.forEach(link => {
@@ -56,8 +56,8 @@ function updateDarkModeLinks(isDarkMode) {
 }
 
 // Initial theme update
-updateTheme();
+///updateTheme();
 
 // Listen for changes in the color scheme preference
-darkModeMediaQuery.addEventListener('change', updateTheme);
+///darkModeMediaQuery.addEventListener('change', updateTheme);
 
