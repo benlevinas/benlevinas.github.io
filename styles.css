@@ -31,7 +31,7 @@ body, .center-text {
     user-select: none;
     -webkit-font-smoothing: antialiased;
     -webkit-user-select: none;
-    white-space: pre;
+    white-space: pre-wrap;
 
 }
 
