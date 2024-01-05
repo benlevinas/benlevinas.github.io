@@ -28,10 +28,10 @@ function updateText() {
 setTimeout(updateText, 1000);
 
 // Check if the user prefers dark mode
-const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-const body = document.body;
+///const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+///const body = document.body;
 
-function updateTheme() {
+///function updateTheme() {
     if (darkModeMediaQuery.matches) {
         // User prefers dark mode
         body.classList.add('dark-mode');
