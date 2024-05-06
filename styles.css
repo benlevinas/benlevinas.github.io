@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'BLGlobule';
-    src: url('fonts/Globule HD.woff2') format('woff2'),
-         url('fonts/Globule HD.woff') format('woff');
+    src: url('fonts/Globule\ Grotesque\ v2.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -21,30 +20,61 @@ body, .center-text {
     font-family: 'BLGlobule', sans-serif;
 }
 
+.center-text, .button-container, .bottom-links {
+    display: flex;  /* Apply flexbox to all three elements */
+    justify-content: space-between;  /* Distribute space evenly */
+    align-items: center;  /* Vertically align content in the center */
+    /* Remove margins for cleaner spacing (optional) */
+    margin: 20px;
+  }
+
 .center-text {
     text-align: center;
+    display: flex;
     color: #08080B;
     font-size: 20px;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.1px;
     opacity: 0;
     transition: opacity 0.3s;
     user-select: none;
     -webkit-font-smoothing: antialiased;
     -webkit-user-select: none;
     white-space: pre;
-
 }
 
+.link-container {
+    font-size: 20px;
+    letter-spacing: -0.1px;
+    padding-bottom: 100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+    color: #08080B;
+    justify-content: center;
+  }
+  
+  .link-container a {
+    color: #000;  /* Set link color (optional) */
+    text-decoration: none;  /* Remove underline (optional) */
+    /* Optional hover effects (consider accessibility) */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .link-container a:hover {
+    color: #afafaf;  /* Change link color on hover (optional) */
+  }
+
 .bottom-links {
-    position: fixed;
-    bottom: 10px;
-    left: 0;
-    width: 100%;
-    font-size: 14px;
+    font-size: 20px; /* Updated font size to match other text */
     background-color: transparent;
     padding: 10px;
     opacity: 0;
+    margin-top: 0px; /* Add some margin for spacing */
     text-align: center;
+    position: absolute;
+    bottom: 10px;
+    margin: 10px;
     animation: fadeIn 1s ease-in-out 2s forwards;
     user-select: none;
     -webkit-font-smoothing: antialiased;
@@ -52,65 +82,53 @@ body, .center-text {
 }
 
 .bottom-links a {
-    color: #D9D9DA;
+    color: #08080B;  /* Initial color set to dark gray */
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 2px; /* Update margin for spacing */
     transition: color 0.3s;
+    /* Font size removed to inherit from .center-text */
 }
 
 .bottom-links a:hover {
-    color: #08080B;
+    color: #afafaf;  /* Hover color set to light gray */
 }
-
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #08080B;
-}
-
-body.dark-mode .center-text {
-    color: #E6E6E7;
-}
-
-.center-text.dark-mode {
-    color: #ffffff;
-}
-
-.bottom-links a.dark-mode {
-    color: #2D2D30;
-}
-
-.bottom-links a:hover.dark-mode {
-    color: #E6E6E7;
-}
-
 
 /* Media query for screens with a width up to 600px */
 @media (max-width: 600px) {
     .center-text {
         font-size: 17px;
-        margin-top: -20px;
         white-space: pre;
         padding-left: 80px;
         padding-right: 80px;
     }
     .bottom-links {
-        font-size: 12px;
+        font-size: 17px;
+        margin-top: 5px;  /* Adjust margin for smaller screens */
     }
+
+    .link-container {
+        font-size: 17px;
+        letter-spacing: -0.1px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        color: #08080B;
+        justify-content: center;
+      }
 }
 
 /* Media query for screens with a width above 1024px */
 @media (min-width: 1024px) {
     .center-text {
         font-size: 20px;
-        padding: 120px;
-        margin-top: -10px;
-        white-space: nowrap;
+        white-space: pre;
     }
     .bottom-links {
-        font-size: 14px;
+        font-size: 20px;
+       
     }
-}
 
+    
+}
 
 @keyframes fadeIn {
     from {
