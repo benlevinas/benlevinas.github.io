@@ -2,7 +2,7 @@ const textContainer = document.getElementById("textContainer");
 const linkcontainer = document.getElementById("linkcontainer");
 const bottomLinks = document.getElementById("bottomLinks");
 const texts = [
-  'Ben Levinas is an industrial designer building \nnarratives, sensibilities, and typologies for a new future.',
+  'Ben Levinas is an industrial designer building \nnarratives, sensibilities, and typologies for the future.',
   '"We become what we behold. We shape \nour tools and then our tools shape us."\n- Father John Culkin'
 ];
 let currentIndex = 0;
