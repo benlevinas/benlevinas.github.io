@@ -30,7 +30,7 @@ body, .center-text {
 
 .center-text {
     text-align: center;
-    display: flex;
+    display: block; /* Changed from flex to block */
     color: #08080B;
     font-size: 20px;
     letter-spacing: -0.1px;
@@ -39,7 +39,10 @@ body, .center-text {
     user-select: none;
     -webkit-font-smoothing: antialiased;
     -webkit-user-select: none;
-    white-space: pre;
+    white-space: pre-wrap; /* Changed from pre to pre-wrap */
+    max-width: 90%; /* Add max-width */
+    margin: 0 auto; /* Center the text container */
+    padding: 0 20px; /* Add some padding */
 }
 
 .link-container {
@@ -51,8 +54,10 @@ body, .center-text {
     user-select: none;
     -webkit-user-select: none;
     color: #08080B;
-    justify-content: center;
-  }
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
   
   .link-container a {
     color: #000;  /* Set link color (optional) */
@@ -97,23 +102,26 @@ body, .center-text {
 @media (max-width: 600px) {
     .center-text {
         font-size: 17px;
-        white-space: pre;
-        padding-left: 80px;
-        padding-right: 80px;
+        white-space: pre-wrap; /* Changed from pre to pre-wrap */
+        padding: 0 20px; /* Adjusted padding */
+        max-width: 100%; /* Full width on mobile */
+        margin: 0 auto;
     }
-    .bottom-links {
-        font-size: 17px;
-        margin-top: 5px;  /* Adjust margin for smaller screens */
-    }
-
+    
     .link-container {
         font-size: 17px;
-        letter-spacing: -0.1px;
-        opacity: 0;
-        transition: opacity 0.3s;
-        color: #08080B;
-        justify-content: center;
-      }
+        padding: 0 20px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .bottom-links {
+        font-size: 17px;
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
 }
 
 /* Media query for screens with a width above 1024px */
