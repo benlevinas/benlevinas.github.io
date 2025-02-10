@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 100vh;
     margin: 0;
     position: relative;
@@ -21,16 +21,8 @@ body, .center-text {
     font-family: 'BLGlobule', sans-serif;
 }
 
-.center-text, .button-container, .bottom-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
-}
-
 .center-text {
     text-align: center;
-    display: block;
     color: #08080B;
     font-size: 20px;
     letter-spacing: -0.1px;
@@ -40,27 +32,23 @@ body, .center-text {
     -webkit-font-smoothing: antialiased;
     -webkit-user-select: none;
     white-space: pre-wrap;
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin-bottom: 1em;
 }
 
 .link-container {
     font-size: 20px;
     letter-spacing: -0.1px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    user-select: none;
-    -webkit-user-select: none;
-    color: #08080B;
     text-align: center;
-    margin: 2em 0;
+    margin: 1em 0;
 }
 
 .link-container a {
     color: #000;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
+    opacity: 0;
+    display: block;  /* Changed to block */
+    margin: 0.2em 0;  /* Reduced margin between links */
 }
 
 .link-container a:hover {
@@ -70,14 +58,16 @@ body, .center-text {
 .bottom-links {
     font-size: 20px;
     background-color: transparent;
-    opacity: 0;
-    padding: 20px;
-    position: absolute;
+    padding: 10px;
+    position: fixed;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    width: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .bottom-links a {
@@ -92,44 +82,18 @@ body, .center-text {
 }
 
 @media (max-width: 600px) {
-    body {
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
     .center-text {
         font-size: 17px;
-        white-space: pre-wrap;
-        margin: 20px auto;
-        padding: 0;
-        max-width: 100%;
+        padding: 0 20px;
     }
 
     .link-container {
         font-size: 17px;
-        margin: 1.5em 0;
-        padding: 0;
+        padding: 0 20px;
     }
 
     .bottom-links {
         font-size: 17px;
-        padding: 10px;
-        bottom: 10px;
-        white-space: nowrap;
-    }
-}
-
-@media (max-height: 600px) {
-    .center-text {
-        margin: 10px auto;
-    }
-
-    .link-container {
-        margin: 1em 0;
-    }
-
-    .bottom-links {
-        padding: 5px;
     }
 }
 
