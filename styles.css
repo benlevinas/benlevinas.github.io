@@ -9,11 +9,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100vh;
     margin: 0;
     position: relative;
     background-color: transparent;
+    overflow: hidden;
 }
 
 body, .center-text {
@@ -21,16 +22,15 @@ body, .center-text {
 }
 
 .center-text, .button-container, .bottom-links {
-    display: flex;  /* Apply flexbox to all three elements */
-    justify-content: space-between;  /* Distribute space evenly */
-    align-items: center;  /* Vertically align content in the center */
-    /* Remove margins for cleaner spacing (optional) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 20px;
-  }
+}
 
 .center-text {
     text-align: center;
-    display: block; /* Changed from flex to block */
+    display: block;
     color: #08080B;
     font-size: 20px;
     letter-spacing: -0.1px;
@@ -39,103 +39,98 @@ body, .center-text {
     user-select: none;
     -webkit-font-smoothing: antialiased;
     -webkit-user-select: none;
-    white-space: pre-wrap; /* Changed from pre to pre-wrap */
-    max-width: 90%; /* Add max-width */
-    margin: 0 auto; /* Center the text container */
-    padding: 0 20px; /* Add some padding */
+    white-space: pre-wrap;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .link-container {
     font-size: 20px;
     letter-spacing: -0.1px;
-    padding-bottom: 100px;
     opacity: 0;
     transition: opacity 0.3s;
     user-select: none;
     -webkit-user-select: none;
     color: #08080B;
     text-align: center;
-    max-width: 90%;
-    margin: 0 auto;
+    margin: 2em 0;
 }
-  
-  .link-container a {
-    color: #000;  /* Set link color (optional) */
-    text-decoration: none;  /* Remove underline (optional) */
-    /* Optional hover effects (consider accessibility) */
+
+.link-container a {
+    color: #000;
+    text-decoration: none;
     transition: color 0.3s ease-in-out;
-  }
-  
-  .link-container a:hover {
-    color: #afafaf;  /* Change link color on hover (optional) */
-  }
+}
+
+.link-container a:hover {
+    color: #afafaf;
+}
 
 .bottom-links {
-    font-size: 20px; /* Updated font size to match other text */
+    font-size: 20px;
     background-color: transparent;
-    padding: 10px;
     opacity: 0;
-    margin-top: 0px; /* Add some margin for spacing */
-    text-align: center;
+    padding: 20px;
     position: absolute;
     bottom: 10px;
-    margin: 10px;
-    animation: fadeIn 1s ease-in-out 2s forwards;
-    user-select: none;
-    -webkit-font-smoothing: antialiased;
-    -webkit-user-select: none;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    width: auto;
 }
 
 .bottom-links a {
-    color: #08080B;  /* Initial color set to dark gray */
+    color: #08080B;
     text-decoration: none;
-    margin: 0 2px; /* Update margin for spacing */
+    margin: 0 2px;
     transition: color 0.3s;
-    /* Font size removed to inherit from .center-text */
 }
 
 .bottom-links a:hover {
-    color: #afafaf;  /* Hover color set to light gray */
+    color: #afafaf;
 }
 
-/* Media query for screens with a width up to 600px */
 @media (max-width: 600px) {
+    body {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
     .center-text {
         font-size: 17px;
-        white-space: pre-wrap; /* Changed from pre to pre-wrap */
-        padding: 0 20px; /* Adjusted padding */
-        max-width: 100%; /* Full width on mobile */
-        margin: 0 auto;
+        white-space: pre-wrap;
+        margin: 20px auto;
+        padding: 0;
+        max-width: 100%;
     }
-    
+
     .link-container {
         font-size: 17px;
-        padding: 0 20px;
-        text-align: center;
-        width: 100%;
-        box-sizing: border-box;
+        margin: 1.5em 0;
+        padding: 0;
     }
-    
+
     .bottom-links {
         font-size: 17px;
-        width: 100%;
-        padding: 10px 20px;
-        box-sizing: border-box;
+        padding: 10px;
+        bottom: 10px;
+        white-space: nowrap;
     }
 }
 
-/* Media query for screens with a width above 1024px */
-@media (min-width: 1024px) {
+@media (max-height: 600px) {
     .center-text {
-        font-size: 20px;
-        white-space: pre;
-    }
-    .bottom-links {
-        font-size: 20px;
-       
+        margin: 10px auto;
     }
 
-    
+    .link-container {
+        margin: 1em 0;
+    }
+
+    .bottom-links {
+        padding: 5px;
+    }
 }
 
 @keyframes fadeIn {
