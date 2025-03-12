@@ -49,6 +49,10 @@ body, .center-text {
     opacity: 0;
     display: block;  /* Changed to block */
     margin: 0.2em 0;  /* Reduced margin between links */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .link-container a:hover {
@@ -75,6 +79,10 @@ body, .center-text {
     text-decoration: none;
     margin: 0 2px;
     transition: color 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .bottom-links a:hover {
