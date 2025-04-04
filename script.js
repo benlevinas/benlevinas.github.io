@@ -16,13 +16,21 @@ function updateText() {
     linkcontainer.style.opacity = "1"; // Make container visible
     const links = linkcontainer.getElementsByTagName('a');
     
-    links[0].style.opacity = "0";
-    links[1].style.opacity = "0";
+    // Set initial opacity for all links
+    for (let i = 0; i < links.length; i++) {
+        links[i].style.opacity = "0";
+    }
     
-    links[0].style.animation = "fadeIn 2s ease-in-out 0.5s forwards";
-    links[1].style.animation = "fadeIn 2s ease-in-out 1.5s forwards";
+    // Add staggered animations for all links
+    for (let i = 0; i < links.length; i++) {
+        // Increase delay by 0.5s for each link
+        const delay = 0.5 + (i * 0.5);
+        links[i].style.animation = `fadeIn 2s ease-in-out ${delay}s forwards`;
+    }
     
-    bottomLinks.style.animation = "fadeIn 2s ease-in-out 2.5s forwards";
+    // Bottom links fade in last
+    const finalDelay = 0.5 + (links.length * 0.5) + 0.5;
+    bottomLinks.style.animation = `fadeIn 2s ease-in-out ${finalDelay}s forwards`;
 }
 
 setTimeout(updateText, 1000);
