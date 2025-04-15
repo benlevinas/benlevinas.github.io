@@ -10,7 +10,7 @@ let currentIndex = 0;
 
 function updateText() {
     textContainer.innerHTML = texts[currentIndex];
-    textContainer.style.animation = "fadeIn 2s ease-in-out forwards";
+    textContainer.style.animation = "fadeIn 1s ease-in-out forwards";
     
     // Stagger the animations for each link
     linkcontainer.style.opacity = "1"; // Make container visible
@@ -24,12 +24,12 @@ function updateText() {
     // Add staggered animations for all links
     for (let i = 0; i < links.length; i++) {
         // Increase delay by 0.5s for each link
-        const delay = 0.5 + (i * 0.5);
+        const delay = 0.25 + (i * 0.25);
         links[i].style.animation = `fadeIn 2s ease-in-out ${delay}s forwards`;
     }
     
     // Bottom links fade in last
-    const finalDelay = 0.5 + (links.length * 0.5) + 0.5;
+    const finalDelay = 0.25 + (links.length * 0.25) + 0.25;
     bottomLinks.style.animation = `fadeIn 2s ease-in-out ${finalDelay}s forwards`;
 }
 
