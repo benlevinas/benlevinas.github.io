@@ -25,12 +25,12 @@ function updateText() {
     for (let i = 0; i < links.length; i++) {
         // Increase delay by 0.5s for each link
         const delay = 0.25 + (i * 0.25);
-        links[i].style.animation = `fadeIn 2s ease-in-out ${delay}s forwards`;
+        links[i].style.animation = `fadeIn 1s ease-in-out ${delay}s forwards`;
     }
     
     // Bottom links fade in last
     const finalDelay = 0.25 + (links.length * 0.25) + 0.25;
-    bottomLinks.style.animation = `fadeIn 2s ease-in-out ${finalDelay}s forwards`;
+    bottomLinks.style.animation = `fadeIn 1s ease-in-out ${finalDelay}s forwards`;
 }
 
 setTimeout(updateText, 1000);
